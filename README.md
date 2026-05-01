@@ -78,29 +78,6 @@ python src/notifiers/telegram_notifier.py
 python src/filters/deal_filter.py
 \`\`\`
 
-## 📁 Estrutura do projeto
-
-\`\`\`
-amazon-deals-bot/
-├── src/
-│   ├── scrapers/
-│   │   └── amazon_scraper.py          # Busca produtos da Amazon
-│   ├── notifiers/
-│   │   ├── telegram_notifier.py       # Envia pelo Telegram ✅
-│   │   └── whatsapp_notifier.py       # Envia pelo WhatsApp (em desenvolvimento)
-│   ├── filters/
-│   │   └── deal_filter.py             # Filtra promoções ✅
-│   └── main.py                        # Orquestra tudo
-├── tests/                              # Testes unitários
-├── venv/                               # Ambiente virtual
-├── .env                                # Variáveis de ambiente (não sobe no Git)
-├── .env.example                        # Exemplo de .env
-├── .gitignore                          # Arquivos a ignorar
-├── requirements.txt                    # Dependências
-├── scheduler.py                        # Agendamento diário
-└── README.md                           # Este arquivo
-\`\`\`
-
 ## 🔄 Status do projeto
 
 - [x] Estrutura do projeto
