@@ -13,4 +13,4 @@ class AmazonScraper:
         pass
     
     def buscar_produtos(self, palavra_chave, quantidade=10):
-        pass
+        return
