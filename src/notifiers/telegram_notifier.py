@@ -8,7 +8,6 @@ def carregar_configuracao():
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = int(os.getenv("TELEGRAM_CHAT_ID"))
     return token, chat_id
-    
 
 async def enviar_mensagem(token,chat_id, texto):
     try:
