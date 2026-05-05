@@ -4,20 +4,23 @@
 
 Bot que busca promoções da Amazon e envia os melhores produtos diariamente via **Telegram** e **WhatsApp**.
 
+> ⚠️ **Status:** Os dados de produtos usados atualmente são **simulados/fictícios** para fins de desenvolvimento. Em breve, será integrada a **Amazon Product Advertising API** oficial para dados reais.
+
 ## ✨ Funcionalidades
 
-- 🔍 Busca promoções na Amazon usando Product Advertising API
-- 🎯 Filtra apenas os melhores descontos (desconto, preço, avaliação)
-- 📨 Envia 2+ produtos por dia via Telegram
+- 🔍 Busca promoções de eletrônicos (dados simulados por enquanto)
+- 🎯 Filtra apenas os melhores deals (desconto, preço, avaliação)
+- 📨 Envia 2+ produtos por dia via Telegram ✅
 - 📱 Suporte para WhatsApp (em desenvolvimento)
-- ⏰ Agendamento automático diário
+- ⏰ Agendamento automático diário (em desenvolvimento)
+- 📊 Análise inteligente de promoções
 
 ## 🛠️ Tecnologias
 
 - **Python 3.14+**
-- **python-telegram-bot** — Para integração com Telegram
-- **amazon-paapi** — Para buscar produtos da Amazon
-- **APScheduler** — Para agendamento diário
+- **python-telegram-bot** — Para integração com Telegram ✅
+- **amazon-paapi** — Para integração futura com Amazon API
+- **APScheduler** — Para agendamento diário (em desenvolvimento)
 - **python-dotenv** — Para gerenciar variáveis de ambiente
 
 ## 📦 Instalação
@@ -83,9 +86,10 @@ python src/filters/deal_filter.py
 - [x] Estrutura do projeto
 - [x] Telegram Notifier funcionando
 - [x] Deal Filter funcionando
-- [ ] Amazon Scraper (em desenvolvimento)
+- [x] Amazon Scraper com dados simulados
+- [x] Main orchestrator funcionando
+- [ ] Integração com Amazon Product Advertising API (aguardando aprovação)
 - [ ] WhatsApp Notifier
-- [ ] Main orchestrator
 - [ ] Agendador diário
 - [ ] Testes unitários
 - [ ] Deploy em servidor
@@ -103,7 +107,23 @@ python src/filters/deal_filter.py
 1. Acesse: https://associates.amazon.com.br
 2. Vá em "Ferramentas do Associado"
 3. Procure por "Product Advertising API"
-4. Gere suas chaves
+4. Gere suas chaves (requer conta de afiliado aprovada)
+
+> **Nota:** Atualmente usando dados simulados. A integração com API real será feita após aprovação da conta de afiliado Amazon.
+
+## 🧪 Teste o projeto
+
+Para testar com dados simulados:
+
+```bash
+# Terminal 1: Ative o venv
+venv\Scripts\activate
+
+# Terminal 2: Execute o bot
+python src/main.py
+```
+
+Você deve receber **2 mensagens no Telegram** com produtos filtrados! ✅
 
 ## 🤝 Contribuições
 
@@ -118,3 +138,12 @@ Este projeto está sob licença MIT.
 Nicollas Santana - [@NicollasSantana](https://github.com/NicollasSantana)
 
 ---
+
+## 📝 Roadmap futuro
+
+- [ ] Integrar Amazon Product Advertising API (dados reais)
+- [ ] Adicionar notificações via WhatsApp
+- [ ] Criar agendador para executar diariamente
+- [ ] Adicionar banco de dados para histórico de produtos
+- [ ] Dashboard web para visualizar produtos
+- [ ] Testes automatizados completos
